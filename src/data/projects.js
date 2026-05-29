@@ -10,11 +10,31 @@ const projects = [
     link: "https://fit-outschool.vercel.app",
   },
   {
+    title: "Mona & Basmala",
+    type: "Web Platform",
+    description:
+      "A responsive website for a hair care brand showcasing products and customer testimonials.",
+    role: "Frontend Developer",
+    stack: ["React", "JavaScript"],
+    impact: "Enhanced online presence & client engagement",
+      link: "https://mona-basmala.vercel.app/",
+    },
+  {
+    title: "Assessly Tech",
+    type: "Web Platform",
+    description:
+      "Online Assessment Solutions with Professional online exam creation and management services for teachers and institutions.",
+    role: "Frontend Developer",
+    stack: ["HTML", "CSS" , "JavaScript"],
+    impact: "Enhanced online presence & client engagement",
+    link: "https://assesslytech.netlify.app/",
+  },
+  {
     title: "MSP CU Platform",
     type: "Community System",
     description:
       "A full community management system for registrations, events, and operations.",
-    role: "Lead Developer",
+    role: "Frontend Developer",
     stack: ["React", "JavaScript"],
     impact: "Managed 1000+ users & streamlined operations",
     link: "https://msp-cu.vercel.app",

@@ -12,9 +12,12 @@ import Vision from "./sections/Vision/Vision";
 import Navbar from "./components/Navbar/navbar";
 import Contact from "./sections/Contact/Contact";
 import Abilities from "./sections/abilities/Abilities";
+import Events from "./sections/Events/Events";
+import { useUniverse } from "./context/UniverseContext";
 
 function App() {
   useLenis();
+  const { activeMode } = useUniverse();
 
   return (
     <>
@@ -26,6 +29,7 @@ function App() {
         <Hero />
         <UniverseSelector />
         <Abilities />
+        {activeMode.title === "Operator" && <Events />}
         <Journey />
         <ExperienceMap />
         <Projects />
