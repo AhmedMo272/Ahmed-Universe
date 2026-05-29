@@ -2,6 +2,14 @@ import { motion } from "framer-motion";
 import "./vision.css";
 
 const Vision = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <section id="vision" className="vision-section">
       <div className="container">
@@ -29,12 +37,14 @@ const Vision = () => {
           </p>
 
           <div className="vision-buttons">
-            <a
-              href="mailto:ahmedmadamohamed0@gmail.com"
+            <button
               className="vision-primary"
+              onClick={() => {
+                scrollToSection("contact");
+              }}
             >
-              Start A Conversation
-            </a>
+              Start a Conversation
+            </button>
 
             <a
               href="https://github.com/AhmedMo272"
