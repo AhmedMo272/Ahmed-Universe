@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050816;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+section {
+    position: relative;
+    padding: 140px 8%;
+    overflow: hidden;
+}
+
+/* Makes transitions between sections feel smoother */
+section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at top,
+            rgba(255, 255, 255, 0.03),
+            transparent 60%);
+}
+
+.glass-hover {
+    transition: all 0.4s ease;
+}
+
+.glass-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.parallax-slow {
+    transform: translateY(0);
+    will-change: transform;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+@media(max-width:768px) {
+
+    h1 {
+        line-height: 1.1;
+    }
+
+    section {
+        padding: 100px 6%;
+    }
+
+    .hero-title {
+        font-size: 3rem !important;
+    }
+}

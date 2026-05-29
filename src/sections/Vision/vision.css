@@ -1,0 +1,95 @@
+.vision-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 8%;
+    background: #030712;
+    overflow: hidden;
+}
+
+.vision-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(59, 130, 246, 0.2),
+            transparent 70%);
+
+    filter: blur(100px);
+    animation: floatGlow 8s infinite ease-in-out;
+}
+
+@keyframes floatGlow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+.vision-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.vision-label {
+    color: #60a5fa;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.vision-content h2 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.vision-text {
+    margin: 2rem auto;
+    max-width: 700px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.vision-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.vision-primary {
+    padding: 16px 32px;
+    border-radius: 999px;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.vision-primary:hover {
+    transform: translateY(-5px);
+}
+
+.vision-secondary {
+    padding: 16px 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(20px);
+    transition: 0.4s;
+}
+
+.vision-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
