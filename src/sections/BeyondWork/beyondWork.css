@@ -1,0 +1,54 @@
+.beyond-section {
+    padding: 140px 8%;
+    background: #070B1A;
+}
+
+.beyond-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.beyond-header h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+}
+
+.beyond-header p {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.memory-card {
+    overflow: hidden;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    transition: 0.4s;
+}
+
+.memory-image {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+}
+
+.memory-content {
+    padding: 25px;
+}
+
+.memory-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.memory-content p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
