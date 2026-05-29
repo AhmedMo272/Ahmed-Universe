@@ -12,7 +12,7 @@ import Vision from "./sections/Vision/Vision";
 import Navbar from "./components/Navbar/navbar";
 import Contact from "./sections/Contact/Contact";
 import Abilities from "./sections/abilities/Abilities";
-import Events from "./sections/Events/Events";
+import Events from "./sections/events/Events";
 import { useUniverse } from "./context/UniverseContext";
 
 function App() {
