@@ -7,7 +7,7 @@ const projects = [
     role: "Frontend Developer",
     stack: ["React", "Framer Motion", "CSS"],
     impact: "Improved registration flow & user experience",
-    link: "https://github.com/AhmedMo272/Fit-OutSchool",
+    link: "https://fit-outschool.vercel.app",
   },
   {
     title: "MSP CU Platform",
@@ -18,6 +18,16 @@ const projects = [
     stack: ["React", "JavaScript"],
     impact: "Managed 1000+ users & streamlined operations",
     link: "https://msp-cu.vercel.app",
+  },
+  {
+    title: "Rahal Designs",
+    type: "Web Platform",
+    description:
+      "A responsive website for a design agency showcasing services and portfolio.",
+    role: "Frontend Developer",
+    stack: ["HTML", "CSS" , "JavaScript"],
+    impact: "Enhanced online presence & client engagement",
+    link: "https://rahal-designs.com",
   },
 ];
 
