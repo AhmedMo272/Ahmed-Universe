@@ -23,6 +23,10 @@ const links = [
     name: "Vision",
     id: "vision",
   },
+  {
+    name: "Contact",
+    id: "contact",
+  },
 ];
 
 const Navbar = () => {
@@ -42,7 +46,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">AHMEDVERSE</div>
+      <div className="navbar-logo">AHMED VERSE</div>
 
       <div className={`navbar-links ${open ? "active" : ""}`}>
         {links.map((link, index) => (
