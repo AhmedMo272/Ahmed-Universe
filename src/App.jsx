@@ -11,6 +11,7 @@ import BeyondWork from "./sections/BeyondWork/BeyondWork";
 import Vision from "./sections/Vision/Vision";
 import Navbar from "./components/Navbar/navbar";
 import Contact from "./sections/Contact/Contact";
+import Abilities from "./sections/abilities/Abilities";
 
 function App() {
   useLenis();
@@ -23,12 +24,10 @@ function App() {
 
       <MainLayout>
         <Hero />
-
         <UniverseSelector />
-
+        <Abilities />
         <Journey />
         <ExperienceMap />
-
         <Projects />
         <BeyondWork />
         <Vision />
