@@ -10,6 +10,7 @@ import CinematicIntro from "./components/universe/CinematicIntro";
 import BeyondWork from "./sections/BeyondWork/BeyondWork";
 import Vision from "./sections/Vision/Vision";
 import Navbar from "./components/navbar/Navbar";
+import Contact from "./sections/Contact/Contact";
 
 function App() {
   useLenis();
@@ -31,6 +32,7 @@ function App() {
         <Projects />
         <BeyondWork />
         <Vision />
+        <Contact />
       </MainLayout>
     </>
   );

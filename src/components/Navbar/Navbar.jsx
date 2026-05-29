@@ -23,6 +23,10 @@ const links = [
     name: "Vision",
     id: "vision",
   },
+  {
+    name: "Contact",
+    id: "contact",
+  },
 ];
 
 const Navbar = () => {
