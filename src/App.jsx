@@ -10,6 +10,7 @@ import CinematicIntro from "./components/universe/CinematicIntro";
 import BeyondWork from "./sections/BeyondWork/BeyondWork";
 import Vision from "./sections/Vision/Vision";
 import Navbar from "./components/navbar/Navbar";
+
 function App() {
   useLenis();
 
@@ -25,7 +26,6 @@ function App() {
         <UniverseSelector />
 
         <Journey />
-
         <ExperienceMap />
 
         <Projects />

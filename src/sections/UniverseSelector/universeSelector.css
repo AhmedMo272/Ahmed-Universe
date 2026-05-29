@@ -5,30 +5,22 @@
     overflow: hidden;
 }
 
+/* HEADER */
 .universe-header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 }
 
-.section-label {
-    color: #60a5fa;
-    letter-spacing: 3px;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-}
-
-.universe-header h2 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 1.1;
-    font-weight: 800;
-}
-
+/* GRID */
 .universe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
+    position: relative;
+    z-index: 2;
 }
 
+/* CARD */
 .universe-card {
     position: relative;
     padding: 35px;
@@ -37,42 +29,71 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
     overflow: hidden;
-    transition: 0.4s;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
+/* ICON */
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+/* ACTIVE STATE */
+.universe-card.active {
+    transform: scale(1.06);
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.08);
+}
+
+/* GLOW */
 .card-glow {
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at top right,
             var(--card-color),
             transparent 70%);
-
     opacity: 0.15;
+    transition: 0.4s;
 }
 
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+.universe-card.active .card-glow {
+    opacity: 0.4;
+    animation: pulseGlow 2s infinite;
 }
 
+/* HOVER */
+.universe-card:hover {
+    border-color: var(--card-color);
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* TEXT */
 .universe-card h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
 .universe-card h4 {
     color: var(--card-color);
-    margin-bottom: 1.2rem;
-    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 .universe-card p {
     color: #cbd5e1;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-.universe-card:hover {
-    border-color: var(--card-color);
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+/* ANIMATION */
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
 }

@@ -6,16 +6,29 @@ import { useUniverse } from "../../context/UniverseContext";
 
 const Hero = () => {
   const { activeMode } = useUniverse();
+
   const [position, setPosition] = useState({
     x: 0,
     y: 0,
   });
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   useEffect(() => {
+    let frame;
+
     const handleMouseMove = (e) => {
-      setPosition({
-        x: e.clientX,
-        y: e.clientY,
+      cancelAnimationFrame(frame);
+
+      frame = requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY });
       });
     };
 
@@ -23,18 +36,22 @@ const Hero = () => {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      cancelAnimationFrame(frame);
     };
   }, []);
+
   const roles = [
     "Frontend Developer",
     "Community Builder",
     "Creative Strategist",
     "Experience Designer",
-    "Systems Thinker",
-    "Event Operator",
-    "Visionary Builder",
+    "1000+ community applicants",
+    "68+ technical sessions",
+    "20+ organized events",
   ];
+
   const [currentRole, setCurrentRole] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRole((prev) => (prev === roles.length - 1 ? 0 : prev + 1));
@@ -42,93 +59,113 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <section id="hero" className="hero-section">
-      <div
-        className="mouse-glow"
-        style={{
-          left: position.x,
-          top: position.y,
-          background: `radial-gradient(circle, ${activeMode.color}25, transparent 70%)`,
-        }}
-      ></div>
+      <div className="container">
+        <div className="active-mode-badge">
+          <span style={{ color: activeMode.color }}>
+            {activeMode.icon} {activeMode.title}
+          </span>
+        </div>
 
-      <div className="glow-orb orb-1"></div>
-      <div className="glow-orb orb-2"></div>
-
-      <div className="grid-overlay"></div>
-
-      <Particles />
-      <div className="hero-overlay"></div>
-
-      <div className="hero-content">
-        <motion.p
-          className="hero-label"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          WELCOME TO AHMED UNIVERSE
-        </motion.p>
-
-        <motion.h1
-          className="hero-title"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Building
-          <br />
-          <span className="hero-gradient">Experiences</span>
-          <br />
-          Between Technology, Leadership & Impact.
-        </motion.h1>
-
-        <motion.div
-          className="hero-role"
-          key={currentRole}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+        <div
+          className="mouse-glow"
           style={{
-            color: activeMode.color,
+            left: position.x,
+            top: position.y,
+            background: `radial-gradient(circle, ${activeMode.color}25, transparent 70%)`,
           }}
-        >
-          {roles[currentRole]}
-        </motion.div>
+        ></div>
 
-        <motion.p
-          className="hero-description"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          A multidisciplinary journey where code, creativity, leadership, and
-          human experiences merge into one evolving universe.
-        </motion.p>
+        <div
+          className="glow-orb orb-1"
+          style={{ background: activeMode.color }}
+        />
 
-        <motion.div
-          className="hero-buttons"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-        >
-          <button
-            className="primary-btn"
+        <div
+          className="glow-orb orb-2"
+          style={{ background: activeMode.color }}
+        />
+
+        <div className="grid-overlay"></div>
+
+        <Particles />
+
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content">
+          <motion.p
+            className="hero-label"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            WELCOME TO AHMED UNIVERSE
+          </motion.p>
+
+          <motion.h1
+            className="hero-title"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {activeMode.title}
+            <br />
+            <span className="hero-gradient">{activeMode.subtitle}</span>
+          </motion.h1>
+
+          <motion.div
+            className="hero-role"
+            key={currentRole}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             style={{
-              background: activeMode.color,
+              color: activeMode.color,
             }}
           >
-            Explore Journey
-          </button>
+            {roles[currentRole]}
+          </motion.div>
 
-          <button className="secondary-btn">Choose Your Path</button>
-        </motion.div>
-      </div>
+          <motion.p
+            className="hero-description"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            {activeMode.description}
+          </motion.p>
 
-      <div className="scroll-indicator">
-        <span>Scroll</span>
-        <div className="scroll-line"></div>
+          <motion.div
+            className="hero-buttons"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+          >
+            <button
+              className="primary-btn"
+              onClick={() => scrollToSection("journey")}
+              style={{
+                background: activeMode.color,
+              }}
+            >
+              Explore Journey
+            </button>
+
+            <button
+              className="secondary-btn"
+              onClick={() => scrollToSection("universe")}
+            >
+              Choose Your Path
+            </button>
+          </motion.div>
+        </div>
+        <div className="linespace"></div>
+        <div className="scroll-indicator">
+          <span>Scroll</span>
+          <div className="scroll-line"></div>
+        </div>
       </div>
     </section>
   );
