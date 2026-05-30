@@ -46,7 +46,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">AHMED VERSE</div>
+      <div className="navbar-logo-container">
+        <div className="navbar-icon-bg">
+          <img src="/assets/images/logo.png" alt="icon" />
+        </div>
+        <div className="navbar-logo">AHMED VERSE</div>
+      </div>
 
       <div className={`navbar-links ${open ? "active" : ""}`}>
         {links.map((link, index) => (
