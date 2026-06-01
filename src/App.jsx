@@ -14,6 +14,7 @@ import Contact from "./sections/Contact/Contact";
 import Abilities from "./sections/abilities/Abilities";
 import Events from "./sections/events/Events";
 import { useUniverse } from "./context/UniverseContext";
+import LeaderUniverse from "./components/leader/LeaderUniverse";
 
 function App() {
   useLenis();
@@ -30,6 +31,7 @@ function App() {
         <UniverseSelector />
         <Abilities />
         {activeMode.title === "Operator" && <Events />}
+        {activeMode.title === "Leader" && <LeaderUniverse />}
         <Journey />
         <ExperienceMap />
         <Projects />
