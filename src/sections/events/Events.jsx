@@ -14,7 +14,7 @@ const categories = [
   "Finance",
   "Education",
   "Career",
-  "Operations",
+  // "Operations",
 ];
 
 const Events = () => {
@@ -31,16 +31,16 @@ const Events = () => {
         <div className="events-header">
           <p className="events-label">OPERATOR MISSIONS</p>
 
-          <h2>20+ Events Operated Across Multiple Industries</h2>
+          <h2>21+ Events Operated Across Multiple Industries</h2>
 
           <div className="operator-stats">
             <div className="stat-card">
-              <h3>20+</h3>
+              <h3>21+</h3>
               <p>Missions Completed</p>
             </div>
 
             <div className="stat-card">
-              <h3>7000+</h3>
+              <h3>50k+</h3>
               <p>People Impacted</p>
             </div>
 
