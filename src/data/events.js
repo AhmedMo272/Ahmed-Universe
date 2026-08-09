@@ -1,5 +1,18 @@
 const events = [
   {
+    title: "Alpha X Masyaf Edition",
+    role: "Box Jump Over Team",
+    date: "August 2026",
+    year: "2026",
+    category: "Fitness",
+    description:
+      "Judged athlete performance while ensuring fairness and operational accuracy.",
+    status: "Completed",
+    scale: "Competition",
+    icon: "🌊",
+    vibeColor: "#F97316",
+  },
+  {
     title: "The Games by In The Zone",
     role: "Play Station Team Member",
     date: "May 2026",
@@ -29,7 +42,7 @@ const events = [
 
   {
     title: "Alpha X Manara Edition",
-    role: "Event Team Member",
+    role: "Event Team",
     date: "April 2026",
     year: "2026",
     category: "Fitness",
@@ -57,16 +70,16 @@ const events = [
 
   {
     title: "Alpha X Simulation Edition",
-    role: "Delta Team Member",
+    role: "Delta Team",
     date: "April 2026",
     year: "2026",
-    category: "Operations",
+    category: "Fitness",
     description:
       "Provided flexible support across all event functions ensuring seamless transitions and operational flow.",
     status: "Completed",
-    scale: "Large Scale",
+    scale: "Competition",
     icon: "🛰️",
-    vibeColor: "#6366F1",
+    vibeColor: "#F97316",
   },
 
   {
