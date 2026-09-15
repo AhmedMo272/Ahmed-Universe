@@ -2,7 +2,7 @@ const leadershipData = [
   {
     title: "MSP Cairo University",
     role: "President",
-    period: "2025 - Present",
+    period: "2025 - 2026",
     icon: "🚀",
     category: "Community Leadership",
     description:
