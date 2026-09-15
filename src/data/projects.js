@@ -1,4 +1,15 @@
 const projects = [
+    {
+    title: "Lunaria Cinema",
+    type: "Web Platform",
+    description:
+      "A responsive website for a cinema showcasing movies, showtimes, and ticket booking.",
+    role: "Frontend Developer",
+    stack: ["React", "JavaScript", "CSS"],
+    impact: "Increased ticket sales & improved user experience",
+    link: "https://lunariacinema.vercel.app/",
+  },
+
   {
     title: "Fit-Out School",
     type: "Web Platform",
@@ -19,16 +30,6 @@ const projects = [
     impact: "Enhanced online presence & client engagement",
       link: "https://mona-basmala.vercel.app/",
     },
-  {
-    title: "Assessly Tech",
-    type: "Web Platform",
-    description:
-      "Online Assessment Solutions with Professional online exam creation and management services for teachers and institutions.",
-    role: "Frontend Developer",
-    stack: ["HTML", "CSS" , "JavaScript"],
-    impact: "Enhanced online presence & client engagement",
-    link: "https://assesslytech.netlify.app/",
-  },
   {
     title: "MSP CU Platform",
     type: "Community System",
