@@ -1,4 +1,30 @@
 const events = [
+ {
+    title: "Huawei ITB Recruitment Expo (HIRE 7)",
+    role: "Backstage Screen Control Team",
+    date: "October 2026",
+    year: "2026",
+    category: "Technology",
+    description:
+      "Managed backstage screen operations and ensured smooth visual transitions during the expo by Setting with the AV suppliers operator slides, videos, speaker cards, stream to the expo screen.",
+    status: "Completed",
+    scale: "Expo",
+    icon: "️️🖥 ️",
+    vibeColor: "#06B6D4",
+  }, 
+  {
+    title: "Alpha X Stadium Edition",
+    role: "Work Force Team",
+    date: "October 2026",
+    year: "2026",
+    category: "Fitness",
+    description:
+      "Worked as part of the operational team ensuring smooth event execution and athlete support.",
+    status: "Completed",
+    scale: "Competition",
+    icon: "🏟 ️",
+    vibeColor: "#F97316",
+  },
   {
     title: "Alpha X Masyaf Edition",
     role: "Box Jump Over Team",
@@ -151,6 +177,19 @@ const events = [
     icon: "🏃",
     vibeColor: "#F97316",
   },
+{
+    title: "Huawei ITB Recruitment Expo (HIRE 6)",
+    role: "Registration & Flow Team",
+    date: "October 2025",
+    year: "2025",
+    category: "Technology",
+    description:
+      "Managed registration and attendee flow for a large-scale recruitment expo.",
+    status: "Completed",
+    scale: "Expo",
+    icon: "️️🖥️",
+    vibeColor: "#06B6D4",
+  },
 
   {
     title: "Femi Tech Egypt",
@@ -163,7 +202,7 @@ const events = [
     status: "Completed",
     scale: "4000+ Attendees",
     icon: "🧾",
-    vibeColor: "#0EA5E9",
+    vibeColor: "#06B6D4",
   },
 
   {
@@ -219,7 +258,7 @@ const events = [
     status: "Completed",
     scale: "Conference",
     icon: "📊",
-    vibeColor: "#3B82F6",
+    vibeColor: "#06B6D4",
   },
 
   {
