@@ -31,7 +31,7 @@ const Events = () => {
         <div className="events-header">
           <p className="events-label">OPERATOR MISSIONS</p>
 
-          <h2>26+ Events Operated Across Multiple Industries</h2>
+          <h2>27+ Events Operated Across Multiple Industries</h2>
 
           <div className="operator-stats">
             <div className="stat-card">
