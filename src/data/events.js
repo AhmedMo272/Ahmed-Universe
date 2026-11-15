@@ -1,4 +1,44 @@
 const events = [
+  {
+    title: "HYROX EGYPT 2026",
+    role: "SANDBAG Team",
+    date: "November 2026",
+    year: "2026",
+    category: "Fitness",
+    description:
+      "Judged athletes and guided competition flow during event phases.",
+    status: "Completed",
+    scale: "Competition",
+    icon: "🏋️",
+    vibeColor: "#F97316",
+  },
+{
+    title: "SHE CAN TECH & AI 2026",
+    role: "Partners & Sponsors Team Leader",
+    date: "November 2026",
+    year: "2026",
+    category: "Leadership",
+    description:
+      "Led the team responsible for managing partnerships and sponsorships area, ensuring smooth movmement, crowd and coordination of sponsors and partners during the event.",
+    status: "Completed",
+    scale: "Summit",
+    icon: " 🎤",
+    vibeColor: "#06B6D4",
+  }, 
+   {
+    title: "Alpha X Alburouj Business Park Eition",
+    role: "BURPEE Team",
+    date: "November 2026",
+    year: "2026",
+    category: "Fitness",
+    description:
+      "Judged athletes and guided competition flow during event phases.",
+    status: "Completed",
+    scale: "Competition",
+    icon: "🏃",
+    vibeColor: "#F97316",
+  },
+
  {
     title: "Huawei ITB Recruitment Expo (HIRE 7)",
     role: "Backstage Screen Control Team",
@@ -95,7 +135,7 @@ const events = [
   },
 
   {
-    title: "Alpha X Simulation Edition",
+    title: "Alpha X Alburouj Business Park Eition",
     role: "Delta Team",
     date: "April 2026",
     year: "2026",
@@ -127,7 +167,7 @@ const events = [
     role: "Flow Team Leader",
     date: "December 2025",
     year: "2025",
-    category: "Technology",
+    category: "Leadership",
     description:
       "Led attendee flow operations and managed on-ground movement during the summit.",
     status: "Completed",
@@ -238,7 +278,7 @@ const events = [
     role: "VIP Team",
     date: "May 2025",
     year: "2025",
-    category: "Leadership",
+    category: "Education",
     description:
       "Welcomed VIP guests and coordinated panel sessions.",
     status: "Completed",
